@@ -201,7 +201,7 @@ if (backgroundSwiper) {
         slidesPerView: 1,
         spaceBetween: 0,
         centeredSlides: true,
-        effect: 'fade',
+        effect: 'slide', // ← efek scroll biasa
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -210,6 +210,7 @@ if (backgroundSwiper) {
             nextEl: '.background-button-next',
             prevEl: '.background-button-prev',
         },
+        allowTouchMove: false,
     });
 }
 

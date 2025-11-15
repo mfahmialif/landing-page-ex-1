@@ -2319,22 +2319,17 @@ picture.jarallax-img img {
   color: #F2B6A0;
 }
 
-.background-swiper {
+.bg-hero-img {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -10;
+  object-fit: cover;
+  z-index: -1;
 }
-.background-swiper .swiper-slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.background-swiper::before {
+
+.bg-hero::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2343,7 +2338,7 @@ picture.jarallax-img img {
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, color-stop(8.81%, #161920), color-stop(99.92%, rgba(22, 25, 32, 0.06)));
   background: linear-gradient(90deg, #161920 8.81%, rgba(22, 25, 32, 0.06) 99.92%);
-  z-index: 10;
+  z-index: -1;
 }
 
 .search-form-container {

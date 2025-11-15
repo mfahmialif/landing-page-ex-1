@@ -3,15 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Landing Page EX 1"
-    />
+    <meta name="description" content="Landing Page EX 1" />
 
     <!-- Title & Favicon -->
-    <title>
-      Landing Page Ex 1
-    </title>
+    <title>Landing Page Ex 1</title>
     <link
       rel="shortcut icon"
       href="assets/img/core-img/favicon.ico"
@@ -148,17 +143,32 @@
     <header class="header-area style-three">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-xl">
-          <!-- Navbar Brand -->
+          <!-- Offcanvas Icon -->
+          <div
+            class="offcanvas-icon d-none d-xl-flex"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sideMenuOffcanvas"
+            aria-controls="sideMenuOffcanvas"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="18"
+              viewBox="0 0 26 18"
+              fill="none"
+            >
+              <path
+                d="M19.5 1.28571C19.5 0.575658 18.9179 0 18.2 0H1.3C0.582056 0 0 0.575658 0 1.28571C0 1.99577 0.582056 2.57143 1.3 2.57143H18.2C18.9179 2.57143 19.5 1.99572 19.5 1.28571ZM1.3 7.71428H24.7C25.4179 7.71428 26 8.28999 26 9C26 9.71006 25.4179 10.2857 24.7 10.2857H1.3C0.582056 10.2857 0 9.71006 0 9C0 8.28999 0.582056 7.71428 1.3 7.71428ZM1.3 15.4286H13C13.7179 15.4286 14.3 16.0042 14.3 16.7143C14.3 17.4243 13.7179 18 13 18H1.3C0.582056 18 0 17.4243 0 16.7143C0 16.0042 0.582056 15.4286 1.3 15.4286Z"
+                fill="#161920"
+              />
+            </svg>
+          </div>
           <a
-            class="navbar-brand d-flex align-items-center gap-2"
+            class="d-flex align-items-center gap-2 d-flex d-xl-none"
             href="index.html"
           >
             <img src="assets/img/core-img/logo.png" alt="" /><span
-              style="
-                font-size: 24px;
-                font-weight: 600;
-                color: #F2B6A0
-              "
+              style="font-size: 24px; font-weight: 600; color: #f2b6a0"
               >jadimudah</span
             >
           </a>
@@ -181,124 +191,38 @@
             class="collapse justify-content-xl-end navbar-collapse"
             id="lpNav"
           >
-            <ul class="navbar-nav align-items-xl-center navbar-nav-scroll">
+            <ul
+              class="navbar-nav align-items-xl-center navbar-nav-scroll"
+              style="justify-content: center; width: 75%"
+            >
               <li class="lp-dd">
-                <a href="#">Home <i class="ti ti-chevron-down"></i></a>
-                <ul class="lp-dd-menu">
-                  <li>
-                    <a href="index.html">Tour Booking</a>
-                  </li>
-                  <li>
-                    <a href="index-2.html">Air Booking</a>
-                  </li>
-                  <li>
-                    <a href="index-3.html">Hotel Booking</a>
-                  </li>
-                </ul>
+                <a href="#">Beranda</a>
               </li>
               <li class="lp-dd">
-                <a href="#">Tours <i class="ti ti-chevron-down"></i></a>
-                <ul class="lp-dd-menu">
-                  <li>
-                    <a href="tour-list.html">Tour List</a>
-                  </li>
-                  <li>
-                    <a href="tour-details.html">Tour Details</a>
-                  </li>
-                </ul>
+                <a href="#">Tentang</a>
               </li>
               <li class="lp-dd">
-                <a href="#">Destinations <i class="ti ti-chevron-down"></i></a>
-                <ul class="lp-dd-menu">
-                  <li>
-                    <a href="destination.html">Destination</a>
-                  </li>
-                  <li>
-                    <a href="destination-details.html">Destination Details</a>
-                  </li>
-                </ul>
+                <a href="#">Fitur</a>
+              </li>
+              <!-- Navbar Brand -->
+              <a
+                class="d-flex align-items-center gap-2 d-none d-xl-block"
+                href="index.html"
+              >
+                <img src="assets/img/core-img/logo.png" alt="" /><span
+                  style="font-size: 24px; font-weight: 600; color: #f2b6a0"
+                  >jadimudah</span
+                >
+              </a>
+
+              <li class="lp-dd">
+                <a href="#">Testimoni</a>
               </li>
               <li class="lp-dd">
-                <a href="#">Pages <i class="ti ti-chevron-down"></i></a>
-                <ul class="lp-dd-menu">
-                  <li class="lp-dd">
-                    <a href="about-us.html">About Us</a>
-                  </li>
-                  <li class="lp-dd">
-                    <a href="#"
-                      >Destinations <i class="ti ti-chevron-right"></i
-                    ></a>
-                    <ul class="lp-dd-menu">
-                      <li>
-                        <a href="destination.html">Destination</a>
-                      </li>
-                      <li>
-                        <a href="destination-details.html"
-                          >Destination Details</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="lp-dd">
-                    <a href="#">Tours <i class="ti ti-chevron-right"></i></a>
-                    <ul class="lp-dd-menu">
-                      <li>
-                        <a href="tour-list.html">Tour List</a>
-                      </li>
-                      <li>
-                        <a href="tour-details.html">Tour Details</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="lp-dd">
-                    <a href="#">Hotels <i class="ti ti-chevron-right"></i></a>
-                    <ul class="lp-dd-menu">
-                      <li>
-                        <a href="hotel-list.html">Hotel List</a>
-                      </li>
-                      <li>
-                        <a href="hotel-details.html">Hotel Details</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="lp-dd">
-                    <a href="#">Guider <i class="ti ti-chevron-right"></i></a>
-                    <ul class="lp-dd-menu">
-                      <li>
-                        <a href="guider.html">Guider</a>
-                      </li>
-                      <li>
-                        <a href="guider-details.html">Guider Details</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="faqs.html">FAQs</a>
-                  </li>
-                  <li>
-                    <a href="gallery.html">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="404.html">404</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="lp-dd">
-                <a href="#">Blog <i class="ti ti-chevron-down"></i></a>
-                <ul class="lp-dd-menu">
-                  <li>
-                    <a href="blog-list.html">Blog List</a>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Blog Grid</a>
-                  </li>
-                  <li>
-                    <a href="blog-details.html">Blog Details</a>
-                  </li>
-                </ul>
+                <a href="#">Harga</a>
               </li>
               <li>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">Pertanyaan</a>
               </li>
             </ul>
 
@@ -306,52 +230,9 @@
             <div
               class="header-navigation d-flex flex-wrap align-items-center gap-3 mt-4 mt-xl-0"
             >
-              <!-- Search Button -->
-              <div class="header-search-btn" id="searchButton">
-                <button class="btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <rect width="20" height="20" fill="#F7F7F7" />
-                    <path
-                      d="M14.0772 14.0987L16.6438 16.6654M15.833 9.58203C15.833 11.2396 15.1745 12.8293 14.0024 14.0014C12.8303 15.1736 11.2406 15.832 9.58301 15.832C7.9254 15.832 6.33569 15.1736 5.16359 14.0014C3.99149 12.8293 3.33301 11.2396 3.33301 9.58203C3.33301 7.92443 3.99149 6.33472 5.16359 5.16261C6.33569 3.99051 7.9254 3.33203 9.58301 3.33203C11.2406 3.33203 12.8303 3.99051 14.0024 5.16261C15.1745 6.33472 15.833 7.92443 15.833 9.58203Z"
-                      stroke="#161920"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- Offcanvas Icon -->
-              <div
-                class="offcanvas-icon"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sideMenuOffcanvas"
-                aria-controls="sideMenuOffcanvas"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="18"
-                  viewBox="0 0 26 18"
-                  fill="none"
-                >
-                  <path
-                    d="M19.5 1.28571C19.5 0.575658 18.9179 0 18.2 0H1.3C0.582056 0 0 0.575658 0 1.28571C0 1.99577 0.582056 2.57143 1.3 2.57143H18.2C18.9179 2.57143 19.5 1.99572 19.5 1.28571ZM1.3 7.71428H24.7C25.4179 7.71428 26 8.28999 26 9C26 9.71006 25.4179 10.2857 24.7 10.2857H1.3C0.582056 10.2857 0 9.71006 0 9C0 8.28999 0.582056 7.71428 1.3 7.71428ZM1.3 15.4286H13C13.7179 15.4286 14.3 16.0042 14.3 16.7143C14.3 17.4243 13.7179 18 13 18H1.3C0.582056 18 0 17.4243 0 16.7143C0 16.0042 0.582056 15.4286 1.3 15.4286Z"
-                    fill="#161920"
-                  />
-                </svg>
-              </div>
-
               <!-- Get A Quote -->
               <a class="btn btn-success" href="contact.html"
-                >Get a Quote <i class="icon-arrow-right"></i
+                >Member Area <i class="icon-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -360,74 +241,147 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-dark">
+    <section class="hero-section">
+      <div class="bg-hero">
+        <img src="assets/img/bg-img/1.jpg" class="bg-hero-img" alt="" />
+      </div>
       <!-- Cloud Image -->
-      <div class="cloud-img"></div>
+      <!-- <div class="cloud-img"></div> -->
+      <img
+        src="assets/img/core-img/divider.png"
+        class="position-absolute bottom-0"
+        alt=""
+      />
 
       <!-- Social Icons -->
-      <div class="social-icons d-none d-sm-flex">
+      <!-- <div class="social-icons d-none d-sm-flex">
         <a href="#"><i class="ti ti-brand-facebook"></i></a>
         <a href="#"><i class="ti ti-brand-x"></i></a>
         <a href="#"><i class="ti ti-brand-linkedin"></i></a>
         <a href="#"><i class="ti ti-brand-instagram"></i></a>
-      </div>
+      </div> -->
 
-      <!-- Background Slider -->
-      <div class="swiper background-swiper">
-        <div class="swiper-wrapper h-100">
-          <div
-            class="swiper-slide h-100"
-            style="background-image: url('assets/img/bg-img/1.jpg')"
-          ></div>
-          <div
-            class="swiper-slide h-100"
-            style="background-image: url('assets/img/bg-img/2.jpg')"
-          ></div>
+      <div class="container">
+        <div class="swiper background-swiper">
+          <div class="swiper-wrapper h-100">
+            <div class="swiper-slide h-100">
+              <div class="row">
+                <div class="col-12 col-sm-7">
+                  <div class="hero-content home-one">
+                    <h3
+                      class="ff-montez text-success wow fadeInUp"
+                      data-wow-delay="300ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Enjoy Your Special Moment.
+                    </h3>
+                    <h2
+                      class="text-white mb-4 wow fadeInUp"
+                      data-wow-delay="600ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Cherish Your Special Moment With Us
+                    </h2>
+                    <p
+                      class="text-white wow fadeInUp"
+                      data-wow-delay="700ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Capture your special wedding moment with us. We provide
+                      professional services to make your dream wedding event
+                      become a source of joy.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-5">
+                  <img src="assets/img/core-img/hero img.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide h-100">
+              <div class="row">
+                <div class="col-12 col-sm-7">
+                  <div class="hero-content home-one">
+                    <h3
+                      class="ff-montez text-success wow fadeInUp"
+                      data-wow-delay="300ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Unleash Your Special Moment.
+                    </h3>
+                    <h2
+                      class="text-white mb-4 wow fadeInUp"
+                      data-wow-delay="600ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Enjoy Your Special Moment With Us
+                    </h2>
+                    <p
+                      class="text-white wow fadeInUp"
+                      data-wow-delay="700ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Let us bring your dream wedding event to life. We offer
+                      professional services to make your special moment
+                      unforgettable.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-5">
+                  <img src="assets/img/core-img/hero img.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide h-100">
+              <div class="row">
+                <div class="col-12 col-sm-7">
+                  <div class="hero-content home-one">
+                    <h3
+                      class="ff-montez text-success wow fadeInUp"
+                      data-wow-delay="300ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Unleash Your Special Momentasdasdasd.
+                    </h3>
+                    <h2
+                      class="text-white mb-4 wow fadeInUp"
+                      data-wow-delay="600ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Enjoy Your Special Moment With Us
+                    </h2>
+                    <p
+                      class="text-white wow fadeInUp"
+                      data-wow-delay="700ms"
+                      data-wow-duration="1000ms"
+                    >
+                      Let us bring your dream wedding event to life. We offer
+                      professional services to make your special moment
+                      unforgettable.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-5">
+                  <img src="assets/img/core-img/hero img.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIX: Penutup swiper-wrapper -->
         </div>
+        <!-- FIX: Penutup swiper -->
       </div>
+      <!-- Penutup container -->
 
       <!-- Background Slider Navigation -->
-      <div class="background-slider-nav d-none d-sm-flex">
+      <div class="background-slider-nav d-flex">
         <div class="background-button-prev">
           <i class="icon-arrow-left"></i>
         </div>
         <div class="background-button-next">
           <i class="icon-arrow-right"></i>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-12 col-sm-9 offset-sm-1 col-xl-10 offset-xl-1 offset-xxl-0"
-          >
-            <!-- Hero Content -->
-            <div class="hero-content home-one">
-              <h3
-                class="ff-montez text-success wow fadeInUp"
-                data-wow-delay="300ms"
-                data-wow-duration="1000ms"
-              >
-                Experience Unmatched Delight With Us.
-              </h3>
-              <h2
-                class="text-white mb-4 wow fadeInUp"
-                data-wow-delay="600ms"
-                data-wow-duration="1000ms"
-              >
-                Where Exceptional Memories Begin
-              </h2>
-              <p
-                class="text-white wow fadeInUp"
-                data-wow-delay="700ms"
-                data-wow-duration="1000ms"
-              >
-                Welcome to our Vitour website! We are a professional and
-                reliable tours company that offers a wide range of printing
-                services are many variations of passages.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -2008,9 +1962,7 @@
             </div>
             <div>
               <h4 class="text-white">Mail Us</h4>
-              <p class="mb-0 text-white">
-                lp@support.com <br />lp@support.com
-              </p>
+              <p class="mb-0 text-white">lp@support.com <br />lp@support.com</p>
             </div>
           </div>
         </div>
