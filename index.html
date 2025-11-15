@@ -34,7 +34,7 @@
 
     <!-- Right Side Offcanvas -->
     <div
-      class="offcanvas offcanvas-end right-side-lp-offcanvas shadow-lg"
+      class="offcanvas offcanvas-start right-side-lp-offcanvas shadow-lg"
       tabindex="-1"
       id="sideMenuOffcanvas"
     >
@@ -142,10 +142,20 @@
     <!-- Header Area-->
     <header class="header-area style-three">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-xl">
+        <nav
+          class="navbar navbar-expand-xl"
+          style="
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15.1px);
+            -webkit-backdrop-filter: blur(15.1px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+          "
+        >
           <!-- Offcanvas Icon -->
           <div
-            class="offcanvas-icon d-none d-xl-flex"
+            class="offcanvas-icon"
             data-bs-toggle="offcanvas"
             data-bs-target="#sideMenuOffcanvas"
             aria-controls="sideMenuOffcanvas"
@@ -264,7 +274,7 @@
       <div class="container">
         <div class="swiper background-swiper">
           <div class="swiper-wrapper h-100">
-            <div class="swiper-slide h-100">
+            <div class="swiper-slide h-100 shader-water">
               <div class="row">
                 <div class="col-12 col-sm-7">
                   <div class="hero-content home-one">
@@ -299,7 +309,7 @@
               </div>
             </div>
 
-            <div class="swiper-slide h-100">
+            <div class="swiper-slide h-100 shader-water">
               <div class="row">
                 <div class="col-12 col-sm-7">
                   <div class="hero-content home-one">
@@ -334,7 +344,7 @@
               </div>
             </div>
 
-            <div class="swiper-slide h-100">
+            <div class="swiper-slide h-100 shader-water">
               <div class="row">
                 <div class="col-12 col-sm-7">
                   <div class="hero-content home-one">
