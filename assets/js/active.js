@@ -198,43 +198,96 @@ if (heroSwiper) {
 const backgroundSwiper = document.querySelector(".background-swiper");
 
 if (backgroundSwiper) {
-    const swiper = new Swiper('.background-swiper', {
+  const swiperBs = new Swiper(".background-swiper", {
     loop: true,
     slidesPerView: 1,
     centeredSlides: true,
     allowTouchMove: false,
     autoplay: {
-        delay: 4500,
-        disableOnInteraction: false
+      delay: 4500,
+      disableOnInteraction: false,
     },
     navigation: {
-        nextEl: '.background-button-next',
-        prevEl: '.background-button-prev'
+      nextEl: ".background-button-next",
+      prevEl: ".background-button-prev",
     },
-});
+  });
 
-// Trigger shader-like effect
-swiper.on('slideChangeTransitionStart', () => {
+  // Trigger shader-like effect
+  swiperBs.on("slideChangeTransitionStart", () => {
     // remove previous shader
-    document.querySelectorAll('.shader-water')
-        .forEach(slide => slide.classList.remove('shader-active'));
+    document
+      .querySelectorAll(".shader-water")
+      .forEach((slide) => slide.classList.remove("shader-active"));
 
     // apply to active & prev
-    const active = document.querySelector('.swiper-slide-active');
-    const prev = document.querySelector('.swiper-slide-prev');
+    const active = document.querySelector(".swiper-slide-active");
+    const prev = document.querySelector(".swiper-slide-prev");
 
-    if (active) active.classList.add('shader-active');
-    if (prev) prev.classList.add('shader-active');
-});
+    if (active) active.classList.add("shader-active");
+    if (prev) prev.classList.add("shader-active");
+  });
 
-// Remove leftover shader
-swiper.on('slideChangeTransitionEnd', () => {
+  // Remove leftover shader
+  swiperBs.on("slideChangeTransitionEnd", () => {
     setTimeout(() => {
-        document.querySelectorAll('.shader-water')
-          .forEach(slide => slide.classList.remove('shader-active'));
+      document
+        .querySelectorAll(".shader-water")
+        .forEach((slide) => slide.classList.remove("shader-active"));
     }, 80);
-});
+  });
+}
 
+// 2.2.1 Featured Swiper
+
+const featuredSwiper = document.querySelector(".featured-swiper");
+
+if (featuredSwiper) {
+  const swiperFeatured = new Swiper(".featured-swiper", {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    // allowTouchMove: false,
+    effect: "cube",
+    cubeEffect: {
+      shadow: false,
+    },
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".featured-background-button-next",
+      prevEl: ".featured-background-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  // // Trigger shader-like effect
+  // swiperFeatured.on("slideChangeTransitionStart", () => {
+  //   // remove previous shader
+  //   document
+  //     .querySelectorAll(".shader-water")
+  //     .forEach((slide) => slide.classList.remove("shader-active"));
+
+  //   // apply to active & prev
+  //   const active = document.querySelector(".swiper-slide-active");
+  //   const prev = document.querySelector(".swiper-slide-prev");
+
+  //   if (active) active.classList.add("shader-active");
+  //   if (prev) prev.classList.add("shader-active");
+  // });
+
+  // // Remove leftover shader
+  // swiperFeatured.on("slideChangeTransitionEnd", () => {
+  //   setTimeout(() => {
+  //     document
+  //       .querySelectorAll(".shader-water")
+  //       .forEach((slide) => slide.classList.remove("shader-active"));
+  //   }, 80);
+  // });
 }
 
 // 2.3.0 Deals Swiper Slide
