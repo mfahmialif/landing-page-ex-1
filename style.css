@@ -5168,7 +5168,7 @@ picture.jarallax-img img {
 }
 
 /* NON-PREMIUM BUTTON (OUTLINE) HOVER */
-.price-card button.btn-outline-success   :hover {
+.price-card button.btn-outline-success:hover {
   border: none !important;
 }
 
