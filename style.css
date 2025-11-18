@@ -1828,7 +1828,7 @@ picture.jarallax-img img {
   height: 100%;
 }
 
-@media screen and (max-width: 1199px)  {
+@media screen and (max-width: 1199px) {
   .frame-image-item {
     height: 126% !important;
     margin-top: -62px !important;
@@ -3821,6 +3821,13 @@ picture.jarallax-img img {
   background: #fff;
   position: relative;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-sm-card.style-two .icon i {
+  font-size: 2rem;
 }
 
 .choose-us-main-img {
@@ -3830,7 +3837,7 @@ picture.jarallax-img img {
 }
 
 .choose-us-main-img .choose-us-image {
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .choose-us-main-img .choose-us-image img {
@@ -5097,6 +5104,12 @@ picture.jarallax-img img {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1199px) {
+  .discount-badge {
+    right: -20px;
+  }
+}
+
 .discount-badge.red {
   background: #ffe5ef;
   color: #ff3c7e;
@@ -5476,6 +5489,32 @@ picture.jarallax-img img {
   position: absolute;
   z-index: -5;
   background: rgba(118, 118, 118, 0.3);
+}
+
+.partner-section {
+  background-color: #161920;
+  position: relative;
+}
+
+.partner-section .partner-card {
+  border-radius: 100%;
+  border: 10px solid #2e3037;
+  background-color: #f2b6a0;
+  padding: 40px;
+  height: 230px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-instagram-section .trolley-img {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -2;
 }
 
 .follow-instagram-card {
@@ -8706,6 +8745,25 @@ textarea.form-control {
     bottom: -300px;
     z-index: 100;
   }
+}
+
+.faq-section {
+  position: relative;
+  z-index: 1;
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("assets/img/core-img/shape2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* FAQ CSS */

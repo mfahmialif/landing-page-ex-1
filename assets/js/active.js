@@ -245,10 +245,10 @@ if (featuredSwiper) {
     slidesPerView: 1,
     centeredSlides: true,
     // allowTouchMove: false,
-    effect: "cube",
-    cubeEffect: {
-      shadow: false,
-    },
+    effect: "slide",
+    // cubeEffect: {
+    //   shadow: false,
+    // },
     autoplay: {
       delay: 4500,
       disableOnInteraction: false,
@@ -259,6 +259,7 @@ if (featuredSwiper) {
     },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   });
 
@@ -356,7 +357,7 @@ if (testimonialSwiper) {
     },
 
     // Mobile
-    slidesPerView: 1.1,
+    slidesPerView: 1.2,
     centeredSlides: true,
     spaceBetween: 16,
 
