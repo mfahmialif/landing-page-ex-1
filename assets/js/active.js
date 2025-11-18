@@ -203,10 +203,7 @@ if (backgroundSwiper) {
     slidesPerView: 1,
     centeredSlides: true,
     allowTouchMove: false,
-    autoplay: {
-      delay: 4500,
-      disableOnInteraction: false,
-    },
+    autoplay: false,
     navigation: {
       nextEl: ".background-button-next",
       prevEl: ".background-button-prev",
@@ -339,23 +336,43 @@ const testimonialSwiper = document.querySelector(".testimonial-swiper");
 if (testimonialSwiper) {
   new Swiper(".testimonial-swiper", {
     loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 30,
+    effect: "slide",
     grabCursor: true,
     watchSlidesProgress: true,
+    speed: 600,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
     navigation: {
       nextEl: ".testimonial-button-next",
       prevEl: ".testimonial-button-prev",
     },
-  });
 
-  testimonialSwiper.querySelectorAll(".testimonial-card").forEach((slide) => {
-    slide.addEventListener("click", () => {
-      testimonialSwiper.querySelectorAll(".testimonial-card").forEach((s) => {
-        s.classList.remove("slide-expand");
-      });
-      slide.classList.add("slide-expand");
-    });
+    pagination: {
+      el: ".swiper-pagination-testimonial",
+      clickable: true,
+    },
+
+    // Mobile
+    slidesPerView: 1.1,
+    centeredSlides: true,
+    spaceBetween: 16,
+
+    // Tablet & Desktop
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 2.2, // 2 cards + spill
+        centeredSlides: true,
+        spaceBetween: 28,
+      },
+    },
   });
 }
 

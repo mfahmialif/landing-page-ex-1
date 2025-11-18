@@ -969,6 +969,14 @@ picture.jarallax-img img {
   position: absolute;
   bottom: -2px;
 }
+.divider-element-flip {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transform: scaleY(-1);
+}
 
 /* Header CSS */
 .offcanvas-icon {
@@ -1806,6 +1814,33 @@ picture.jarallax-img img {
 }
 
 /* Hero CSS */
+
+.frame-image {
+  position: relative;
+  height: auto;
+}
+
+.frame-image-item {
+  z-index: 9;
+  object-fit: cover;
+  object-position: center;
+  /* width: 100%; */
+  height: 100%;
+}
+
+@media screen and (max-width: 1199px)  {
+  .frame-image-item {
+    height: 126% !important;
+    margin-top: -62px !important;
+  }
+}
+
+.img-couple {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero-content h3 {
   font-size: 24px;
   font-weight: 400;
@@ -5007,7 +5042,7 @@ picture.jarallax-img img {
   border-radius: 18px;
   padding: 28px;
   border: 1px solid #e5e5e5;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   position: relative;
   transition: 0.25s ease;
   height: 1000px;
@@ -5021,7 +5056,7 @@ picture.jarallax-img img {
 
 /* HOVER */
 .price-card:hover {
-  box-shadow: 0 12px 38px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
 }
 
@@ -5158,7 +5193,6 @@ picture.jarallax-img img {
   color: #fff;
   border: none;
 }
-
 
 /* NON-PREMIUM BUTTON (OUTLINE) */
 .price-card button.btn-outline {
@@ -6068,12 +6102,11 @@ picture.jarallax-img img {
 }
 
 /* Testimonial CSS */
+
 .testimonial-card {
   border-radius: 18px;
   position: relative;
   z-index: 1;
-  height: 420px;
-  width: 195px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   background-position: center center;
@@ -6081,27 +6114,28 @@ picture.jarallax-img img {
   background-repeat: no-repeat;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
-  margin-top: 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
+  background-color: #fff;
+  /* margin: 0 10px; */
 }
+
+.swiper-pagination-testimonial {
+  width: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .testimonial-card .testimonial-content {
   -webkit-transition: all 350ms;
   transition: all 350ms;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 65%;
-  flex: 0 0 65%;
-  width: 65%;
-  max-width: 65%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
   padding: 30px 40px;
   border-radius: 18px 0 0 18px;
-  opacity: 0;
-  visibility: hidden;
 }
 .testimonial-card .testimonial-content .testimonial-text {
   margin-top: 16px;
@@ -6356,6 +6390,25 @@ picture.jarallax-img img {
 .testimonial-button-next-two:focus {
   background-color: #f7921f;
   color: #ffffff;
+}
+
+.testimonial-section {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(assets/img/core-img/shape2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .testimonial-section .jarallax-container {
@@ -8474,6 +8527,7 @@ textarea.form-control {
   background-color: #f7f7f7;
   -webkit-transition: all 350ms;
   transition: all 350ms;
+  max-width: 80% !important;
 }
 @media only screen and (min-width: 992px) {
   .contact-card-sm {
@@ -8538,26 +8592,35 @@ textarea.form-control {
 .contact-section {
   position: relative;
   z-index: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.contact-section::after {
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  padding: 40px;
+  max-width: 70% !important;
+}
+
+/* .contact-section::after {
   content: "";
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 80px);
-  background: rgba(22, 25, 32, 0.6);
-}
+  height: 100%;
+  background: #000;
+} */
+
 @media only screen and (min-width: 1200px) {
   .contact-section::after {
     height: calc(100% - 92px);
   }
 }
-.contact-section::before {
+/* .contact-section::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -8566,16 +8629,16 @@ textarea.form-control {
   width: 100%;
   height: 80px;
   background-color: #ffffff;
-}
+} */
 @media only screen and (min-width: 1200px) {
   .contact-section::before {
     height: 92px;
   }
 }
 .contact-section .contact-form {
-  padding: 40px;
+  /* padding: 40px;
   background-color: #ffffff;
-  border-radius: 18px 18px 0 0;
+  border-radius: 18px 18px 0 0; */
 }
 .contact-section .contact-form .form-group {
   position: relative;
