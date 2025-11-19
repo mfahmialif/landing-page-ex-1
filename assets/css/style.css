@@ -2872,6 +2872,7 @@ picture.jarallax-img img {
   gap: 60px;
   margin-top: 20px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .about-wrapper-four .right-content .counter-items .counts h3 {
