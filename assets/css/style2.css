@@ -1,31 +1,34 @@
 .swiper-pagination-bullet-active {
-        background: #f2b6a0 !important;
-      }
+  background: #f2b6a0 !important;
+}
+.swiper-pagination-partner .swiper-pagination-bullet {
+  background: #fff;
+}
 
-      .testimonial-card {
-        border-radius: 20px;
-        background: #ffffff;
-        padding: 28px;
-        transition: 0.3s ease;
-      }
+.testimonial-card {
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 28px;
+  transition: 0.3s ease;
+}
 
-      .testimonial-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-      }
-      .partner-item {
-        flex: 0 0 45%; /* default: 2 kolom */
-        width: 100%;
-      }
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+.partner-item {
+  flex: 0 0 45%; /* default: 2 kolom */
+  width: 100%;
+}
 
-      @media (min-width: 576px) {
-        .partner-item {
-          flex: 0 0 30%; /* ~3 kolom */
-        }
-      }
+@media (min-width: 576px) {
+  .partner-item {
+    flex: 0 0 30%; /* ~3 kolom */
+  }
+}
 
-      @media (min-width: 768px) {
-        .partner-item {
-          flex: 0 0 22%; /* ~4 kolom */
-        }
-      }
+@media (min-width: 768px) {
+  .partner-item {
+    flex: 0 0 22%; /* ~4 kolom */
+  }
+}

@@ -57,51 +57,84 @@ const fetchUndangan = () => {
     dataType: "json",
     success: function (response) {
       const data = response.data;
-      // Jika data kosong
+
       if (!data || data.length === 0) {
         $("#listUndangan").html(`
-          <div class="col-12 text-center py-5">
-            <p class="text-danger fw-bold mb-0">
-              Tidak ada undangan.
-            </p>
-          </div>
-        `);
+      <div class="swiper-slide text-center py-5">
+        <p class="text-danger fw-bold mb-0">
+          Tidak ada undangan.
+        </p>
+      </div>
+    `);
         return;
       }
-      let content = data.map((item) => {
-        const image = `https://undangan.jadimudah.id/${item.image}`;
-        const link = `https://pengantin.jadimudah.id/preview/${item.id_tema}`;
-        const title = item.name;
-        const desc = item.description;
-        const type = item.type;
-        return `
-                <div class="col-12 col-sm-4 col-md-3">
-                  <div class="follow-instagram-card">
 
-                    <!-- TYPE BADGE -->
-                    <span class="insta-type">${type}</span>
+      let content = data
+        .map((item) => {
+          const image = `https://undangan.jadimudah.id/${item.image}`;
+          const link = `https://pengantin.jadimudah.id/preview/${item.id_tema}`;
+          const title = item.name;
+          const desc = item.description;
+          const type = item.type;
 
-                    <img src="${image}" alt="" />
+          return `
+        <div class="swiper-slide">
+          <div class="follow-instagram-card">
 
-                    <!-- Instagram Button -->
-                    <a href="${link}" class="instagram-btn">
-                      <i class="ti ti-world"></i>
-                    </a>
+            <!-- TYPE BADGE -->
+            <span class="insta-type">${type}</span>
 
-                    <!-- Title & Description -->
-                    <div class="insta-content">
-                      <h5 class="insta-title">
-                        <a href="${link}" class="text-success">${title}</a>
-                      </h5>
-                      <p class="insta-desc">${desc}</p>
-                    </div>
-                  </div>
-                </div>
+            <img src="${image}" alt="" />
 
-              `;
-      });
+            <!-- Instagram Button -->
+            <a href="${link}" class="instagram-btn">
+              <i class="ti ti-world"></i>
+            </a>
+
+            <!-- Title & Description -->
+            <div class="insta-content">
+              <h5 class="insta-title">
+                <a href="${link}" class="text-success">${title}</a>
+              </h5>
+              <p class="insta-desc">${desc}</p>
+            </div>
+          </div>
+        </div>
+      `;
+        })
+        .join("");
+
       $("#listUndangan").html(content);
+
+      // INIT SWIPER (dibuat ulang setiap load)
+      new Swiper(".myUndanganSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+
+        // Breakpoints
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+        },
+
+        pagination: {
+          el: ".undangan-swiper-pagination",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".undangan-button-next",
+          prevEl: ".undangan-button-prev",
+        },
+      });
     },
+
     error: function (xhr) {
       const status = xhr.status;
 
