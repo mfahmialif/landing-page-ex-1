@@ -381,40 +381,50 @@ const partnerSwiper = document.querySelector(".partnerSwiper");
 
 if (partnerSwiper) {
   new Swiper(".partnerSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 20,
-  centeredSlides: true,
-  loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
 
-  slidesOffsetBefore: 40, // spill kiri
-  slidesOffsetAfter: 40,  // spill kanan
+    slidesOffsetBefore: 40,
+    slidesOffsetAfter: 40,
 
-  autoplay: {
-    delay: 1800,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    576: {
-      slidesOffsetBefore: 60,
-      slidesOffsetAfter: 60,
+    speed: 6000, // gerak sangat pelan
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
     },
-    768: {
-      slidesOffsetBefore: 80,
-      slidesOffsetAfter: 80,
-    },
-    992: {
-      slidesOffsetBefore: 100,
-      slidesOffsetAfter: 100,
-    },
-  },
 
-  pagination: {
-    el: ".swiper-pagination-partner",
-    clickable: true,
-  },
-});
+    // ❌ matikan interaksi user
+    allowTouchMove: false,
+    simulateTouch: false,
+    touchRatio: 0,
+    draggable: false,
+    grabCursor: false,
 
+    freeMode: true,
+    freeModeMomentum: false,
+
+    breakpoints: {
+      576: {
+        slidesOffsetBefore: 60,
+        slidesOffsetAfter: 60,
+      },
+      768: {
+        slidesOffsetBefore: 80,
+        slidesOffsetAfter: 80,
+      },
+      992: {
+        slidesOffsetBefore: 100,
+        slidesOffsetAfter: 100,
+      },
+    },
+
+    pagination: {
+      el: ".swiper-pagination-partner",
+      clickable: false,
+    },
+  });
 }
 
 // 2.5.0 Premier Destination Swiper Slide
