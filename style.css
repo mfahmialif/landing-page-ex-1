@@ -1216,6 +1216,10 @@ picture.jarallax-img img {
     color: #02a5ce;
   }
 }
+
+.header-area .navbar-nav li.lp-dd > a.active {
+    color: #f2b6a0
+}
 .header-area .navbar-nav li.lp-dd {
   position: relative;
   z-index: 1;
@@ -5544,6 +5548,76 @@ picture.jarallax-img img {
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
 }
+/* Container teks */
+.follow-instagram-card .insta-content {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+  color: #fff;
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease;
+}
+
+/* Judul */
+.follow-instagram-card .insta-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #f2b6a0;
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Deskripsi */
+.follow-instagram-card .insta-desc {
+  opacity: 0.9;
+  margin: 0;
+  background-color: #f2b6a0;
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+
+/* TYPE Badge */
+.follow-instagram-card .insta-type {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff6363;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  z-index: 20;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Variasi warna (opsional) */
+.follow-instagram-card .insta-type.basic {
+  background: #02a5ce;
+}
+
+.follow-instagram-card .insta-type.premium {
+  background: #ff9f00;
+}
+
+
+/* Tampilkan saat hover */
+.follow-instagram-card:hover .insta-content,
+.follow-instagram-card:focus .insta-content {
+  opacity: 1;
+  visibility: visible;
+}
+
 .follow-instagram-card .instagram-btn {
   position: absolute;
   z-index: 10;
@@ -8045,10 +8119,12 @@ picture.jarallax-img img {
 }
 .footer-card .gallery-post li img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
+  height: 75px;
   object-fit: cover;
   border-radius: 8px;
+  background-color: #f2b6a0;
+  padding: 5px;
+  object-fit: contain;
 }
 .footer-card .gallery-post li:hover,
 .footer-card .gallery-post li:focus {
@@ -8640,7 +8716,15 @@ textarea.form-control {
   backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(17px);
   padding: 40px;
-  max-width: 70% !important;
+  max-width: 70%;
+}
+
+@media screen and (max-width: 1200px) {
+   .contact-card {
+    max-width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }
 
 /* .contact-section::after {
