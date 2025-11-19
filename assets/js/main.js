@@ -57,6 +57,17 @@ const fetchUndangan = () => {
     dataType: "json",
     success: function (response) {
       const data = response.data;
+      // Jika data kosong
+      if (!data || data.length === 0) {
+        $("#listUndangan").html(`
+          <div class="col-12 text-center py-5">
+            <p class="text-danger fw-bold mb-0">
+              Tidak ada undangan.
+            </p>
+          </div>
+        `);
+        return;
+      }
       let content = data.map((item) => {
         const image = `https://undangan.jadimudah.id/${item.image}`;
         const link = `https://pengantin.jadimudah.id/preview/${item.id_tema}`;
@@ -92,7 +103,16 @@ const fetchUndangan = () => {
       $("#listUndangan").html(content);
     },
     error: function (xhr) {
-      console.log(xhr);
+      const status = xhr.status;
+
+      $("#listUndangan").html(`
+        <div class="col-12 text-center py-5">
+          <p class="text-danger fw-bold mb-1">
+            Tidak ada undangan.
+          </p>
+          <p class="text-muted">Kode error: ${status}</p>
+        </div>
+      `);
     },
     complete: function () {
       $("#undangan").loading("stop");
