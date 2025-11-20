@@ -383,46 +383,27 @@ if (partnerSwiper) {
   new Swiper(".partnerSwiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
-    centeredSlides: true,
     loop: true,
 
-    slidesOffsetBefore: 40,
-    slidesOffsetAfter: 40,
-
-    speed: 6000, // gerak sangat pelan
+    speed: 8000, // boleh pelan tapi tetap stabil
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
     },
 
-    // ❌ matikan interaksi user
     allowTouchMove: false,
-    simulateTouch: false,
-    touchRatio: 0,
-    draggable: false,
+
+    freeMode: false, // MATIKAN
+    centeredSlides: false,
+
     grabCursor: false,
 
-    freeMode: true,
-    freeModeMomentum: false,
+    loopAddBlankSlides: true,
 
     breakpoints: {
-      576: {
-        slidesOffsetBefore: 60,
-        slidesOffsetAfter: 60,
-      },
-      768: {
-        slidesOffsetBefore: 80,
-        slidesOffsetAfter: 80,
-      },
-      992: {
-        slidesOffsetBefore: 100,
-        slidesOffsetAfter: 100,
-      },
-    },
-
-    pagination: {
-      el: ".swiper-pagination-partner",
-      clickable: false,
+      576: { spaceBetween: 20 },
+      768: { spaceBetween: 24 },
+      992: { spaceBetween: 28 },
     },
   });
 }

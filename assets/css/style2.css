@@ -21,6 +21,11 @@
   width: 100%;
 }
 
+.partnerSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
 @media (min-width: 576px) {
   .partner-item {
     flex: 0 0 30%; /* ~3 kolom */
@@ -31,4 +36,39 @@
   .partner-item {
     flex: 0 0 22%; /* ~4 kolom */
   }
+}
+
+
+/* Container Tab Kapsul */
+.pricing-nav {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px; /* Padding di dalam kapsul utama */
+    display: inline-flex;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    border: 1px solid #f0f0f0;
+}
+
+/* Style Tombol Tab (Keadaan Normal) */
+.pricing-nav .nav-link {
+    border-radius: 50px;
+    padding: 10px 35px;
+    color: #888; /* Warna teks abu-abu saat tidak aktif */
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Style Tombol Tab (Saat Aktif/Dipilih) */
+.pricing-nav .nav-link.active {
+    background-color: #f2b6a0; /* Warna Request Anda */
+    color: #fff; /* Teks menjadi putih */
+    box-shadow: 0 4px 15px rgba(242, 182, 160, 0.5); /* Efek bayangan halus senada */
+}
+
+/* Style saat Mouse Hover (tapi tidak aktif) */
+.pricing-nav .nav-link:hover:not(.active) {
+    color: #f2b6a0; /* Teks berubah warna request */
+    background-color: #fdf8f6; /* Background sangat muda agar tidak terlalu polos */
 }

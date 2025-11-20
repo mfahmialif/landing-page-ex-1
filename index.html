@@ -1869,188 +1869,304 @@
 
         <div class="divider-sm"></div>
 
-        <div class="row g-4 justify-content-center">
-          <!-- BASIC -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="price-card wow fadeInUp" data-wow-delay="0.2">
-              <div class="discount-badge">DISKON 20%</div>
-
-              <h3 class="price-title">Basic</h3>
-              <p class="price-subtitle">Fitur dasar undangan digital</p>
-
-              <div class="price-number">
-                <span class="old">Rp 89.000</span>
-                <span class="new">Rp 12.900</span>
-              </div>
-
+        <div class="text-center">
+          <ul class="nav nav-pills pricing-nav" id="pricingTab" role="tablist">
+            <li class="nav-item" role="presentation">
               <button
-                class="btn btn-outline-success w-100 mb-2"
-                onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20basic', '_blank')"
+                class="nav-link active"
+                id="undangan-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#undangan-content"
+                type="button"
+                role="tab"
+                aria-controls="undangan-content"
+                aria-selected="true"
               >
-                Pilih paket
+                Undangan Digital
               </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="guestbook-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#guestbook-content"
+                type="button"
+                role="tab"
+                aria-controls="guestbook-content"
+                aria-selected="false"
+              >
+                E-Guest Book
+              </button>
+            </li>
+          </ul>
+        </div>
 
-              <div class="price-note">
-                Dapatkan harga terbaik untuk penggunaan jangka panjang.
+        <div class="tab-content" id="pricingTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="undangan-content"
+            role="tabpanel"
+            aria-labelledby="undangan-tab"
+          >
+            <div class="row g-4 justify-content-center align-items-stretch">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="price-card wow fadeInUp h-100" data-wow-delay="0.2">
+                  <h3 class="price-title text-success">Basic</h3>
+                  <p class="price-subtitle">Fitur dasar undangan digital</p>
+
+                  <div class="price-number">
+                    <span class="old">Rp 150.000</span>
+                    <span class="new">Rp 99.000</span>
+                  </div>
+
+                  <img
+                    src="assets/img/core-img/paket/basic.png"
+                    alt=""
+                    class="img-fluid mb-3"
+                  />
+
+                  <div class="price-features">
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Invitation (Manual)
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Revision
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Dashboard User
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Free Subdomain
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> No Autoblast WA
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Standard Themes
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> Premium & Animation Themes
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> Editable All Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        RSVP & Ucapan
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Custom Music
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Split Invitation
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> E-Gift (QRIS)
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> QR Code Check-in System
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> Hardware & Crew Support
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    class="btn btn-outline-success w-100 my-4"
+                    onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20basic', '_blank')"
+                  >
+                    Pilih paket
+                  </button>
+                </div>
               </div>
 
-              <hr class="price-divider" />
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="price-card wow fadeInUp h-100" data-wow-delay="0.4">
+                  <h3 class="price-title text-success">Premium</h3>
+                  <p class="price-subtitle">Undangan digital fitur lengkap</p>
 
-              <div class="price-features">
-                <ul>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Unlimited Invitation
-                    (Manual Send)
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Unlimited Revision</li>
-                  <li><i class="ti ti-circle-check"></i> Split Invitation</li>
-                  <li><i class="ti ti-circle-check"></i> RSVP</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Music custom for
-                    backsound
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Personalize Invitation
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Dashboard User</li>
-                  <li><i class="ti ti-circle-check"></i> Free Subdomain</li>
-                  <li><i class="ti ti-circle-check"></i> Customer Service</li>
-                </ul>
+                  <div class="price-number">
+                    <span class="old">Rp 500.000</span>
+                    <span class="new">Rp 375.000</span>
+                  </div>
+
+                  <img
+                    src="assets/img/core-img/paket/premium.png"
+                    alt=""
+                    class="img-fluid mb-3"
+                  />
+
+                  <div class="price-features">
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Invitation (Manual)
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Revision
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Dashboard User
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Free Subdomain
+                      </li>
+                      <li class="mb-2 fw-bold text-dark">
+                        <i class="ti ti-circle-check text-success me-2"></i> 100
+                        Autoblast WA
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Standard Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Premium & Animation Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Editable All Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        RSVP & Ucapan
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Custom Music
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Split Invitation
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        E-Gift (QRIS)
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> QR Code Check-in System
+                      </li>
+                      <li class="mb-2 text-muted text-decoration-line-through">
+                        <i class="ti ti-x me-2"></i> Hardware & Crew Support
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    class="btn btn-success w-100 my-4"
+                    onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20premium', '_blank')"
+                  >
+                    Pilih paket
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- PREMIUM (TERPOPULER, DI TENGAH) -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="price-card popular wow fadeInUp" data-wow-delay="0.4">
-              <div class="popular-label">TERPOPULER</div>
-              <div class="discount-badge red">DISKON 30%</div>
+          <div
+            class="tab-pane fade"
+            id="guestbook-content"
+            role="tabpanel"
+            aria-labelledby="guestbook-tab"
+          >
+            <div class="row g-4 justify-content-center align-items-stretch">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="price-card wow fadeInUp h-100" data-wow-delay="0.6">
+                  <h3 class="price-title text-success">Guest Book</h3>
+                  <p class="price-subtitle">Sistem check-in tamu undangan</p>
 
-              <h3 class="price-title">Premium</h3>
-              <p class="price-subtitle">
-                Fitur paling lengkap untuk undangan digital
-              </p>
+                  <div class="price-number">
+                    <span class="old">Rp 2.000.000</span>
+                    <span class="new">Rp 1.500.000</span>
+                  </div>
 
-              <div class="price-number">
-                <span class="old">Rp 119.900</span>
-                <span class="new">Rp 23.900</span>
-              </div>
+                  <img
+                    src="assets/img/core-img/paket/guest.png"
+                    alt=""
+                    class="img-fluid mb-3"
+                  />
 
-              <button
-                class="btn btn-success w-100 mb-2"
-                onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20premium', '_blank')"
-              >
-                Pilih paket
-              </button>
+                  <div class="price-features">
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Invitation (Manual)
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Unlimited Revision
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Dashboard User + Guest Report
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Free Subdomain
+                      </li>
+                      <li class="mb-2 fw-bold text-dark">
+                        <i class="ti ti-circle-check text-success me-2"></i> 200
+                        Autoblast WA
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Standard Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Premium & Animation Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Editable All Themes
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        RSVP & Ucapan
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Custom Music
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Split Invitation
+                      </li>
+                      <li class="mb-2">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        E-Gift (QRIS)
+                      </li>
+                      <li class="mb-2 fw-bold">
+                        <i class="ti ti-circle-check text-success me-2"></i> QR
+                        Code Check-in System
+                      </li>
+                      <li class="mb-2 fw-bold">
+                        <i class="ti ti-circle-check text-success me-2"></i>
+                        Hardware (Tab+Scan) & Crew
+                      </li>
+                    </ul>
+                  </div>
 
-              <div class="price-note">
-                Pilihan terbaik untuk fitur maksimal dan performa undangan
-                premium.
-              </div>
-
-              <hr class="price-divider" />
-
-              <div class="price-features">
-                <ul>
-                  <li>
-                    <i class="ti ti-circle-check"></i> 100 Autoblast WA
-                    (Automatic)
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Editable All Themes
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Premium Themes</li>
-                  <li><i class="ti ti-circle-check"></i> Animation Themes</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> E-Gift (E-Angpao) QRIS
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Unlimited Invitation
-                    (Manual Send)
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Unlimited Revision</li>
-                  <li><i class="ti ti-circle-check"></i> Split Invitation</li>
-                  <li><i class="ti ti-circle-check"></i> RSVP</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Music custom for
-                    backsound
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Personalize Invitation
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Dashboard User</li>
-                  <li><i class="ti ti-circle-check"></i> Free Subdomain</li>
-                  <li><i class="ti ti-circle-check"></i> Customer Service</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- GUEST BOOK DIGITAL -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="price-card wow fadeInUp" data-wow-delay="0.6">
-              <div class="discount-badge">DISKON 40%</div>
-
-              <h3 class="price-title">Guest Book Digital</h3>
-              <p class="price-subtitle">
-                Sistem check-in digital untuk tamu undangan
-              </p>
-
-              <div class="price-number">
-                <span class="old">Rp 299.000</span>
-                <span class="new">Rp 106.900</span>
-              </div>
-
-              <button
-                class="btn btn-outline-success w-100 mb-2"
-                onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20guest%20book%20digital', '_blank')"
-              >
-                Pilih paket
-              </button>
-
-              <div class="price-note">
-                Solusi tamu modern dengan fitur lengkap berbasis digital.
-              </div>
-
-              <hr class="price-divider" />
-
-              <div class="price-features">
-                <ul>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Free “Basic” Undangan
-                    Package
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Free “Premium” Undangan
-                    Package
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Softfile QR Code untuk
-                    Check-in
-                  </li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> 200 Autoblast WhatsApp
-                    (Automatic)
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> QR Code Check-in</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Self Check-in non QR
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> RSVP & QR Code</li>
-                  <li><i class="ti ti-circle-check"></i> 2 Device Tablet</li>
-                  <li><i class="ti ti-circle-check"></i> 2 Device Scanner</li>
-                  <li><i class="ti ti-circle-check"></i> Router Internet</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> 1 Technical Support Crew
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> 5 Hours Duration</li>
-                  <li>
-                    <i class="ti ti-circle-check"></i> Unlimited Invitation
-                  </li>
-                  <li><i class="ti ti-circle-check"></i> Unlimited Revision</li>
-                  <li><i class="ti ti-circle-check"></i> Dashboard User</li>
-                  <li><i class="ti ti-circle-check"></i> Guest Report</li>
-                </ul>
+                  <button
+                    class="btn btn-outline-success w-100 my-4"
+                    onclick="window.open('https://wa.me/6282345646468?text=Saya%20ingin%20membeli%20undangan%20guest%20book', '_blank')"
+                  >
+                    Pilih paket
+                  </button>
+                </div>
               </div>
             </div>
           </div>

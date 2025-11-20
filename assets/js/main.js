@@ -79,6 +79,9 @@ const fetchUndangan = () => {
 
           return `
         <div class="swiper-slide">
+          <h5 class="insta-title text-center mb-3">
+              <a href="${link}" class="text-success">${title}</a>
+            </h5>
           <div class="follow-instagram-card">
 
             <!-- TYPE BADGE -->
@@ -93,9 +96,6 @@ const fetchUndangan = () => {
 
             <!-- Title & Description -->
             <div class="insta-content">
-              <h5 class="insta-title">
-                <a href="${link}" class="text-success">${title}</a>
-              </h5>
               <p class="insta-desc">${desc}</p>
             </div>
           </div>
