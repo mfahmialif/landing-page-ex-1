@@ -48,6 +48,7 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     margin-bottom: 3rem;
     border: 1px solid #f0f0f0;
+    justify-content: center;
 }
 
 /* Style Tombol Tab (Keadaan Normal) */
